@@ -13,7 +13,7 @@ def extract_from_json(file_to_process):
 
 def extract():
     extracted_data = pd.DataFrame(columns=['Name','Market Cap (US$ Billion)'])
-    for jsonfile in glob.glob("*.json"):
+    for jsonfile in glob.glob("bank_market_cap_1.json"):
         extracted_data = extracted_data._append(extract_from_json(jsonfile), ignore_index=True)
     return extracted_data
 
